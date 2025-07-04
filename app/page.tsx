@@ -530,6 +530,15 @@ export default function Home() {
           </div>
         </section>
       </div>
+      {isOpen && (
+      <ImageModal
+        src={modalImg.src}
+        alt={modalImg.alt}
+        descricao={modalImg.descricao}
+        isOpen={isOpen}
+        onClose={() => setIsOpen(false)}
+      />
+    )}
     </main>
   );
 }
