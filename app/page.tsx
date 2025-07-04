@@ -13,8 +13,7 @@ const imagens = [
   "traffic_time_series.png",
   "ipg_top10_line.png",
   "tam_frequencia.png",
-  "tam_medio_geral.png",
-  "size_cdf.png",
+  "cdf.png",
 ];
 
 const downloads = [
@@ -346,6 +345,36 @@ export default function Home() {
             Para métricas que não exigiam visualização gráfica, coletei os resultados diretamente no terminal.
           </p>
         </section>
+
+
+        {/* === Galeria de Gráficos === */}
+      <section className="space-y-4">
+        <h2 className="text-3xl font-semibold border-b border-gray-600 pb-2">
+          Gráficos
+        </h2>
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+          {imagens.map((img, idx) => (
+            <div
+              key={idx}
+              className="bg-[#1f2937] p-2 rounded-lg ring-1 ring-gray-700 cursor-pointer"
+              onClick={() => {
+                setModalImg({ src: `/${img}`, alt: img.replace(/\.png$/, ''), descricao: '' });
+                setIsOpen(true);
+              }}
+            >
+              <p className="text-center text-white mb-2">
+                {img.replace(/\.png$/, '').replace(/_/g, ' ')}
+              </p>
+              <img
+                src={`/${img}`}
+                alt={img}
+                className="w-full h-40 object-cover rounded shadow-md border border-gray-700 transition-transform duration-200 hover:scale-105"
+              />
+            </div>
+          ))}
+        </div>
+      </section>
+{/* === Fim da Galeria === */}
 
 
         <section className="bg-[#1f2937] p-6 rounded-lg ring-1 ring-gray-700">
