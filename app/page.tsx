@@ -331,7 +331,11 @@ export default function Home() {
   return (
     <main className="min-h-screen bg-[#111827] text-gray-100 flex flex-col items-center px-6 py-12 font-sans">
       <div className="w-full max-w-5xl space-y-12">
-
+        <header className="w-full mb-8 text-center">
+          <p className="text-gray-400">Aluno: <span className="text-white font-semibold">Inácio Camargo Buemo</span></p>
+          <p className="text-gray-400">Matrícula: <span className="text-white font-semibold">202220097</span></p>
+          <p className="text-gray-400">Turma: <span className="text-white font-semibold">SI</span></p>
+        </header>
         <section className="mb-12 bg-[#1f2937] p-8 rounded-lg ring-1 ring-gray-700">
           <h2 className="text-3xl font-semibold text-white mb-4">
             Visão Geral do Workflow
